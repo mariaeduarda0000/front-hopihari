@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/mapa-hopi.jpeg'); /* Caminho para o mapa */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    height: 100vh; /* Garante que o fundo cubra toda a altura da tela */
+    display: flex; /* Para centralizar o card */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.card {
+    width: 500px;
+    height: 510px;
+    border-radius: 18px;
+    background-color: rgba(255, 255, 255, 0.9); /* Cor do card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra para destaque */
+    display: flex;
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Adiciona espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    z-index: 2;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.foto-perfil {
+    width: 150px; /* Largura da foto */
+    height: 150px; /* Altura da foto */
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover; /* Garante que a imagem se ajuste ao espaço sem distorção */
+    border: 4px solid rgba(219, 213, 213, 0.179); /* Adiciona uma borda ao redor da foto */
+    margin-bottom: 20px; /* Espaço entre a foto e o título */
+}
+
+.titulo-perfil {
+    font-size: 24px; /* Tamanho da fonte do título */
+    color: #FF6B00;
+    margin: 0; /* Remove margens extras */
+}
+
+.informacoes {
+    width: 100%; /* Ocupa toda a largura do card */
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco translúcido */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 15px; /* Espaçamento interno */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-top: 20px; /* Espaço acima da seção de informações */
+    color: black; /* Cor do texto */
+    font-size: 16px; /* Tamanho da fonte */
+}
