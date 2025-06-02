@@ -34,3 +34,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Inicializar o redimensionamento do mapa de imagem
+    if (typeof imageMapResize === 'function') {
+        imageMapResize();
+    }
+
+    // ...código existente...
+});
