@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const urlParams = new URLSearchParams(window.location.search);
     const area =  urlParams.get('area');
     const token = String(localStorage.getItem('token').replaceAll('"', ''));
+    console.log(token)
     const response = await fetch(`http://localhost:3001/brinquedos/area/${area}`, { 
             method: 'GET',
             headers: {
@@ -13,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     const data = await response.json();
     console.log(data);
 
-    for (var brinquedos of data.resultados){
+    for (var brinquedos of data.Resultados){
         console.log(brinquedos);
 
         const grid = document.querySelector(".rides-grid");
@@ -22,7 +23,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 <div class="ride-image" style="background-image: url('../../images/bugabalum.jpg')"></div>
                 <div class="ride-info">
                     <h3 class="ride-name">${brinquedos.name}</h3>
-                    <div class="ride-time">${brinquedos.waiting_time} Minutos2</div>
+                    <div class="ride-time">${brinquedos.waiting_time} Minutos</div>
                     <span class="ride-status status-busy">${brinquedos.status}</span>
                 </div>
             </div>`
