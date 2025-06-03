@@ -60,6 +60,8 @@ body {
 }
 
 .logout-btn {
+    margin-bottom: 15px;
+    display: block;
     padding: 8px 15px;
     background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.4);
@@ -91,11 +93,12 @@ body {
 }
 
 .nav-item {
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .nav-link {
-    display: block;
+    display: inline-block;
+    margin-right: 15px;
     padding: 12px 25px;
     color: #333;
     text-decoration: none;
@@ -371,4 +374,12 @@ body {
     .menu-toggle {
         display: block;
     }
+}
+
+.botoes {
+    display: flex; /* Alinha os itens em uma linha */
+    flex-direction: row; /* Garante que os itens fiquem na horizontal */
+    gap: 15px; /* Espaçamento horizontal entre os botões */
+    align-items: center; /* Alinha os botões verticalmente */
+    justify-content: center; /* Centraliza os botões no contêiner */
 }
